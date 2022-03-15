@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01</title>
+    <link rel="stylesheet" href="../atividade-03/css/style.css">
+</head>
+
+<!-- Inicio corpo do Html -->
+
+<body>
+    <h1>Formulário de Cadastro</h1>
+    <fieldset>
+
+        <legend>Dados Pessoais</legend>
+        <label for="nome">Nome Completo:* </label>
+        <input type="text" name="nome" id="nome" required minlength="2" maxlength="100" />
+
+        <br>
+
+        <label for="email">Email:* </label>
+        <input type="email" name="email" id="email" required
+            pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9_.+-]+\.[a-zA-Z0-9_.]+$)" title="Endereço de email" />
+
+        <br>
+
+        <label> Cel:</label>
+        <input type="number" name="cel" />
+
+        <label> Endereço:</label>
+        <input type="text" name="Endereço" id="Endereço" required
+            pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9_.+-]+\.[a-zA-Z0-9_.]+$)" title="Endereço" />
+
+        <br>
+
+        <label> Cep:</label>
+        <input type="name" name="Cep" id="Cep" required minlength="2" maxlength="8" />
+
+        <br>
+
+        <label for="date">Data de Nascimento</label>
+        <input type="date" name="date" id="date" />
+
+    </fieldset>
+
+    <fieldset>
+
+        <legend>Dados Escolares:</legend>
+        <label for="nome">Nome do curso 1: </label>
+        <input type="text" name="nome" id="nome" required minlength="2" maxlength="10" />
+
+        <br>
+
+        <label for="Horas">Horas: </label>
+        <input type="number" name="horas" id="horas" required
+            pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9_.+-]+\.[a-zA-Z0-9_.]+$)" title="Endereço de email" />
+
+        <br>
+
+        <label for="date">Mes/Ano: </label>
+        <input type="month" name="date" id="date" required min="2015-02" max="" />
+
+        <br>
+        <label for="nome">Nome do curso 2: </label>
+        <input type="text" name="nome" id="nome" required minlength="2" maxlength="10" />
+
+        <br>
+
+        <label for="Horas">Horas: </label>
+        <input type="number" name="horas" id="horas" required
+            pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9_.+-]+\.[a-zA-Z0-9_.]+$)" title="Endereço de email" />
+
+        <br>
+
+        <label for="date">Mes/Ano: </label>
+        <input type="month" name="date" id="date" required min="2015-02" max="" />
+
+        <br>
+        <label for="nome">Nome do curso 3: </label>
+        <input type="text" name="nome" id="nome" required minlength="2" maxlength="10" />
+
+        <br>
+
+        <label for="Horas">Horas: </label>
+        <input type="number" name="horas" id="horas" required
+            pattern="(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9_.+-]+\.[a-zA-Z0-9_.]+$)" title="Endereço de email" />
+
+        <br>
+
+        <label for="date">Mes/Ano: </label>
+        <input type="month" name="date" id="date" required min="2015-02" max="" />
+
+        <br>
+
+
+    </fieldset>
+
+    <fieldset>
+
+        <legend>Dados Profissionais:</legend>
+        <label for="nome">Nome da Empresa 1: </label>
+        <input type="text" name="nome" id="nome" required minlength="2" maxlength="10" />
+
+        <br>
+
+    
+        <label>
+            <select name="Tipo">
+                <option value="">Atual</option>
+                <option value="S">Sim</option>
+                <option value="N">Não</option>
+            </select>
+        </label>
+
+        <label for="Tempo">Tempo de trabalho: </label>
+        <input type="text" name="Tempo" />
+
+        <label for="nome">Cargo: </label>
+        <input type="text" name="nome" id="nome" required minlength="2" maxlength="10" />
+
+        <label> Descrição das atividades:</label>
+        <textarea name="descricao" >Digite aqui sua descrição</textarea>
+
+
+
+        <label for="nome">Nome da Empresa 2: </label>
+        <input type="text" name="nome" id="nome" required minlength="2" maxlength="10" />
+
+        <br>
+
+    
+        <label>
+            <select name="Tipo">
+                <option value="">Atual</option>
+                <option value="S">Sim</option>
+                <option value="N">Não</option>
+            </select>
+        </label>
+
+        <label for="Tempo">Tempo de trabalho: </label>
+        <input type="text" name="Tempo" />
+
+        <label for="nome">Cargo: </label>
+        <input type="text" name="nome" id="nome" required minlength="2" maxlength="10" />
+
+        <label> Descrição das atividades:</label>
+        <textarea name="descricao" >Digite aqui sua descrição</textarea>
+
+        <label for="nome">Nome da Empresa 3: </label>
+        <input type="text" name="nome" id="nome" required minlength="2" maxlength="10" />
+
+        <br>
+
+    
+        <label>
+            <select name="Tipo">
+                <option value="">Atual</option>
+                <option value="S">Sim</option>
+                <option value="N">Não</option>
+            </select>
+        </label>
+
+        <label for="Tempo">Tempo de trabalho: </label>
+        <input type="text" name="Tempo" />
+
+        <label for="nome">Cargo: </label>
+        <input type="text" name="nome" id="nome" required minlength="2" maxlength="10" />
+
+        <label> Descrição das atividades:</label>
+        <textarea name="descricao" >Digite aqui sua descrição</textarea>
+
+
+    </fieldset>
+    <label class="botao" for="check">
+        <input type="checkbox" id="check" />
+        Eu autorizo a usar os dados </label>
+        <br>
+        <br>
+        
+        <button>Salvar</button>
+
+
+</body>

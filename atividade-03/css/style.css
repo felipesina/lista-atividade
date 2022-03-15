@@ -1,0 +1,57 @@
+fieldset{
+    background-color: rgb(168, 17, 17);
+    margin-bottom: 5px;
+    border: 5px solid #000000;
+    margin: 50px 200px;
+}
+
+legend{
+    background-color: #09ff00;
+    color: #000000;
+    padding: 5px;
+
+}
+
+label{
+    /* display: inline; padrao */
+    display: block;
+    margin: 3px;
+}
+
+input[type="text"], [type="number"], [type="email"], select, textarea {
+    padding: 10px;
+    width: 500px;
+    font-size: 15px;
+    border: 4px solid #4b0404;
+    margin-top: 5px;
+
+}
+
+select{
+    width: 520px;
+}
+
+button{
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #CCCCCC;
+    background-color: #2ac40b;
+    margin: 0px 350px;
+}
+
+button:hover{
+    background-color: #DDDDDD;
+}
+
+a{
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.botao{
+    margin: 0px 200px;
+}

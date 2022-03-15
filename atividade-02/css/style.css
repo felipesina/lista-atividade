@@ -1,0 +1,21 @@
+.insuficiencia{
+    background-color: #008000;
+}
+.septicemia{
+    background-color: #ff0000;
+}
+.falencia{
+    background-color: #0000ff;
+}
+.morte{
+    background-color: rgb(211, 15, 129);
+}
+.covid{
+    margin: 15px;
+}
+img{
+    margin: 10px 100px;
+}
+.def{
+    font-size: 20px;
+}
