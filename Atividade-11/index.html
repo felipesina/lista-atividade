@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Exercício 11</title>
+</head>
+<style>
+
+.amarelo {
+    background-color: yellow;
+}
+.vermelho {
+    background-color: red !important;
+}
+.verde {
+    background-color: green;
+}
+.azul {
+    background-color: blue;
+}
+
+</style>
+
+<body>
+    <div class="container">
+        <h2>Painel Centro Cirurgico</h2>
+        <div class="row">
+            <input type="hidden" id="id">
+            <div class="form-group col-sm-6">
+                <label for="nome">Nome do Paciente:</label>
+                <input type="text" class="form-control" id="nome" name="nome">
+            </div>
+            <div class="form-group col-sm-3">
+                <label for="nome">Status:</label>
+                <select name="status" id="status" class="form-control">
+                    <option value="Pré operatório">Pré operatório</option>
+                    <option value="Em sala de cirurgia">Em sala de cirurgia</option>
+                    <option value="Sala de recuperação">Sala de recuperação</option>
+                    <option value="Transferido">Transferido</option>
+                    </select>
+            </div>
+            <div class="form-group col-sm-3">
+                <label for="nome">Local:</label>
+                <input type="text" class="form-control" id="local" name="local">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-3">
+                <label for="nome">Hora Início:</label>
+                <input type="time" class="form-control" id="horaInicio" name="horaInicio">
+            </div>
+            <div class="form-group col-sm-3">
+                <label for="nome">Início Previsto:</label>
+                <input type="time" class="form-control" id="inicioPrevisto" name="inicioPrevisto">
+            </div>
+            <div class="form-group col-sm-3">
+                <label for="nome">Fim Previsto:</label>
+                <input type="time" class="form-control" id="fimPrevisto" name="fimPrevisto">
+            </div>
+            <div class="form-group col-sm-3">
+                <label for="nome">Saída Prevista:</label>
+                <input type="time" class="form-control" id="saidaPrevista" name="saidaPrevista">
+            </div>
+
+
+
+
+        </div>
+        <button class="btn" onclick="novo()">Novo</button>
+        <button class="btn btn-primary" onclick="gravar()">Gravar</button>
+        <button class="btn btn-danger" onclick="apagar()">Apagar</button>
+
+        <br>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Nome do Paciente:</th>
+                    <th>Status:</th>
+                    <th>Local:</th>
+                    <th>Hora Início:</th>
+                    <th>Início Previsto:</th>
+                    <th>Fim Previsto:</th>
+                    <th>Saída Prevista:</th>
+                </tr>
+            </thead>
+            <tbody id="tbCorpo">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let listapaciente = [];
+
+
+
+        if (localStorage.getItem('listaPaciente') != null) {
+            listapaciente = JSON.parse(localStorage.getItem('listaPaciente'));
+            
+        }else{
+
+
+              //let alunos = [{nome:"ALEXANDRE LEASTRO LEMES GONZAGA", dt_nascimento:"2000-03-29"},{nome:"ANA JULIA DA SILVA FELICIANO", dt_nascimento:"1984-05-04"},{nome:"ANDERSON GABRYEL FREIRE BARBOSA", dt_nascimento:"1973-11-16"},{nome:"ANDRÉ ALBUQUERQUE GONÇALVES", dt_nascimento:"1978-06-08"},{nome:"ANGELO DE SOUZA MOREIRA", dt_nascimento:"2005-11-30"},{nome:"ARYNA NOÊMIA MEIRELES DE SOUSA", dt_nascimento:"1976-06-16"},{nome:"BEATRIZ HELENA ULIAN COÊLHO", dt_nascimento:"1981-02-05"},{nome:"CAMILA DANTAS DE MELO", dt_nascimento:"1999-04-18"},{nome:"DANIELSON MACIEL DA COSTA", dt_nascimento:"2000-10-21"},{nome:"DANILO DE SOUZA BEZERRA", dt_nascimento:"1987-11-29"},{nome:"DAYANA DA SILVA CORREIA", dt_nascimento:"1973-06-16"},{nome:"DIOGO HENRIQUE VIEIRA LEITE", dt_nascimento:"2016-08-29"},{nome:"EDVANDO JUNYOR SALES DE OLIVEIRA", dt_nascimento:"1982-09-07"},{nome:"FABRICIO ARAUJO DA SILVA", dt_nascimento:"1972-05-17"},{nome:"FELIPE SILVA DE ARAUJO", dt_nascimento:"2017-09-15"},{nome:"FREDERICO LUIZ COSTA DE FARIA", dt_nascimento:"2001-07-21"},{nome:"GERMANIR LEAL SANTOS", dt_nascimento:"2019-01-15"},{nome:"JORGEAN DO BOMFIM PAULINO", dt_nascimento:"2004-10-17"},{nome:"JOSÉ PEREIRA CAETANO", dt_nascimento:"2006-04-04"},{nome:"KACIO DE SOUSA MENESES", dt_nascimento:"1978-06-12"},{nome:"LEANDRO ALMEIDA DA SILVA", dt_nascimento:"2003-07-27"},{nome:"LUCAS LUAN SANTOS ARAUJO", dt_nascimento:"1981-05-05"},{nome:"LUCAS PEREIRA SALMITO", dt_nascimento:"1975-02-07"},{nome:"LUCAS SILVA PIEDADE", dt_nascimento:"2012-02-14"},{nome:"MARCIO AQUILLES MONTELES SILVA", dt_nascimento:"1978-10-29"},{nome:"MARCUS VINICIUS FREITA SILVA", dt_nascimento:"1980-01-28"},{nome:"MATHEUS FELÍCIO LIMA", dt_nascimento:"1989-04-16"},{nome:"PAULO DA SILVA BARBOSA", dt_nascimento:"1981-04-02"},{nome:"RAFAELLA BEATRIZ GUIMARÃES CARDOS", dt_nascimento:"2016-05-07"},{nome:"RODOLFO RODRIGUES FRANCISCO", dt_nascimento:"2009-06-17"},{nome:"SAMUEL RAMOS QUITÂNIA", dt_nascimento:"1977-10-25"},{nome:"SUYANNE SARA MIRANDA SILVA", dt_nascimento:"1977-08-30"},{nome:"SUZANNY FREITA SILVA", dt_nascimento:"2004-01-23"},{nome:"THAMIRES DE JESUS DOS SANTOS", dt_nascimento:"2005-09-12"},{nome:"VANESSA GONÇALVES DE MOURA", dt_nascimento:"1983-10-03"},{nome:"WELLINGTON OLIVEIRA MACHADO", dt_nascimento:"2002-07-17"},{nome:"WENDELL BARESI SANTOS DE OLIVEIRA", dt_nascimento:"1986-07-13"}];
+              
+              let alunos = [{id:"1", nome:"ALEXANDRE LEASTRO LEMES GONZAGA", dt_nascimento:"2000-03-29",status:"Pré operatório"},{id:"2", nome:"ANA JULIA DA SILVA FELICIANO", dt_nascimento:"1984-05-04",status:"Em sala de cirurgia"}];
+
+              for (const i in alunos) {
+                alunos[i].cpf = gerarCpf();
+                console.log(alunos[i]);
+                localStorage.setItem('listaPaciente',JSON.stringify(alunos));
+            }
+
+           
+        }
+        function gravar() {
+            let paciente = {};
+            paciente.nome = document.getElementById('nome').value;
+            paciente.status = document.getElementById('status').value;
+            paciente.local = document.getElementById('local').value;
+            paciente.horaInicio = document.getElementById('horaInicio').value;
+            paciente.inicioPrevisto = document.getElementById('inicioPrevisto').value;
+            paciente.fimPrevisto = document.getElementById('fimPrevisto').value;
+            paciente.saidaPrevista = document.getElementById('saidaPrevista').value;
+
+
+            let i = document.getElementById('id').value;
+            console.log(i == '');
+            if (i == '') {
+                listapaciente.push(paciente);
+            } else {
+                listapaciente[i] = paciente;
+            }
+            localStorage.setItem('listaPaciente', JSON.stringify(listapaciente));
+            carregarTable();
+            novo();
+        }
+        function carregarTable() {
+            let tabela = '';
+            var classifi = '';
+
+            for (i in listapaciente) {
+                classifi = '';
+
+                if (listapaciente[i].status == "Pré operatório"){
+
+                    classifi = "amarelo";
+
+                }else if (listapaciente[i].status == "Em sala de cirurgia"){
+
+                    classifi = "vermelho";
+
+                }else if (listapaciente[i].status == "Sala de recuperação"){
+
+                    classifi = "verde";
+
+                }else if (listapaciente[i].status == "Transferido"){
+
+                    classifi = "azul";
+
+                }
+
+                tabela += `<tr onclick='editar(${i})'><td>${listapaciente[i].nome}</td><td class="${classifi}">${listapaciente[i].status}</td><td>${listapaciente[i].local}</td>\
+                    <td>${listapaciente[i].horaInicio}</td><td>${listapaciente[i].inicioPrevisto}</td><td>${listapaciente[i].fimPrevisto}</td> <td>${listapaciente[i].saidaPrevista}</td> </tr>`;
+            }
+            document.getElementById('tbCorpo').innerHTML = tabela;
+        }
+
+        function editar(i) {
+            document.getElementById('id').value = i;
+            document.getElementById('nome').value = listapaciente[i].nome;
+            document.getElementById('status').value = listapaciente[i].status;
+            document.getElementById('local').value = listapaciente[i].local;
+            document.getElementById('horaInicio').value = listapaciente[i].horaInicio;
+            document.getElementById('inicioPrevisto').value = listapaciente[i].inicioPrevisto;
+            document.getElementById('fimPrevisto').value = listapaciente[i].fimPrevisto;
+            document.getElementById('saidaPrevista').value = listapaciente[i].saidaPrevista;
+            
+        }
+
+        function novo() {
+            document.getElementById('id').value = '';
+            document.getElementById('nome').value = '';
+            document.getElementById('status').value = '';
+            document.getElementById('local').value = '';
+            document.getElementById('horaInicio').value = '';
+            document.getElementById('inicioPrevisto').value = '';
+            document.getElementById('fimPrevisto').value = '';
+            document.getElementById('saidaPrevista').value = '';
+        }
+
+        function apagar() {
+            let i = document.getElementById('id').value;
+            listapaciente.splice(i, 1);
+            localStorage.setItem('listaPaciente', JSON.stringify(listapaciente));
+            carregarTable();
+            novo();
+        }
+
+        carregarTable();
+    </script>
+</body>
+
+</html>
