@@ -19,6 +19,11 @@ header{
     width: 900px;
 }
 
+.logo{
+    display: flex;
+    align-items: center;
+}
+
 .menu{
     display: flex;
     align-items: center;
@@ -43,4 +48,44 @@ nav a{
 nav a:hover{
     background-color: #df44ca;
     color: #FFF;
+}
+#banner{
+    display: flex;
+    justify-content: center;
+    background-image: url("../ovinhos.jpeg.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.banner_headline{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner_headline h1{
+    color: #FFF;
+    font-size: 60px;
+    text-shadow: 0px 1px 0px #000;
+    margin: 0;
+    padding: 0;
+    width: 600px;
+    max-width: 600px;
+}
+
+.banner_headline h2{
+    color: #FFF;
+    font-size: 20px;
+    text-shadow: 0px 1px 0px #000;
+    margin: 0;
+    padding: 0;
+    width: 350px;
+    max-width: 350px;
+    margin-top: 30px;
 }
