@@ -71,7 +71,7 @@ nav a:hover{
 
 .banner_headline h1{
     color: #FFF;
-    font-size: 60px;
+    font-size: 50px;
     text-shadow: 0px 1px 0px #000;
     margin: 0;
     padding: 0;
@@ -88,4 +88,94 @@ nav a:hover{
     width: 350px;
     max-width: 350px;
     margin-top: 30px;
+}
+#ofertas {
+    display: flex;
+    justify-content: center;
+}
+
+#ofertas section{
+    flex: 2;
+}
+
+#ofertas aside{
+    flex: 1;
+}
+
+.ovos_titulo{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.ovos_titulo_texto{
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+.ovos_titulo_barra{
+    width: 50px;
+    height: 3px;
+    background-color: #33aae1;
+    margin-top: 10px;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article{
+    flex:1;
+    min-width: 200px;
+    margin-right: 20px;
+}
+
+article a{
+    text-decoration: none;
+}
+
+article .ovos_sabores{
+    display: flex;
+}
+
+article js{
+    background-color: #2b4c99;
+    color: #FFF;
+    font-size: 12px;
+    padding: 10px;
+    margin-right: 3px;
+}
+
+article .comprar{
+    background-color: #39aae1;
+    color: #FFF;
+    font-size: 12px;
+    padding: 10px;
+}
+
+article .ovos_thumbnail{
+    margin-top: 30px;
+}
+
+article .ovos_titulo{
+    margin-top: 30px;
+    margin-bottom: 25px;
+    color: #000;
+    font-size: 23px;
+}
+
+article .ovos_resume{
+    color: #000;
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+article{
+    flex:1;
+    min-width: 200px;
+    margin-right: 20px;
+}
+
+article a{
+    text-decoration: none;
 }
