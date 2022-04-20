@@ -31,9 +31,9 @@ function replicar() {
 
 function alterarQt(id, quantidade) {
     let p = lista[id];
-    p.qt += qt;
-    if (p.qt < 0) p.qt = 0;
-    document.getElementsByClassName("quantidade")[id].innerHTML = p.qt;
+    p.quantidade += quantidade;
+    if (p.quantidade < 0) p.quantidade = 0;
+    document.getElementsByClassName("quantidade")[id].innerHTML = p.quantidade;
 }
 let msgModal = "";
 function mostrarPedido() {
