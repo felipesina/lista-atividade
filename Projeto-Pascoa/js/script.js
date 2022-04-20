@@ -14,11 +14,11 @@ function replicar() {
     for (const p of lista) {
         let id = i;
         let produto = document.querySelector(".produto").cloneNode(true);
-        produto.querySelector(".titulo").innerHTML = p.nome.toUpperCase();
+        produto.querySelector(".ovos_titulo").innerHTML = p.nome.toUpperCase();
         produto.querySelector("img").src = `img/${p.img}`;
         produto.querySelector(".valor").innerHTML = `R$ ${p.valor}`;
-        produto.querySelector(".descricao").innerHTML = p.descricao;
-        produto.querySelector(".qt").innerHTML = p.qt;
+        produto.querySelector(".ovos_sabores").innerHTML = p.ovos_sabores;
+        produto.querySelector(".quantidade").innerHTML = p.quantidade;
 
         produto.querySelector(".menos").addEventListener("click", function () { alterarQt(id, -1) });
         produto.querySelector(".mais").addEventListener("click", function () { alterarQt(id, 1) });
@@ -29,11 +29,11 @@ function replicar() {
     document.querySelector(".produto").remove();
 }
 
-function alterarQt(id, qt) {
+function alterarQt(id, quantidade) {
     let p = lista[id];
     p.qt += qt;
     if (p.qt < 0) p.qt = 0;
-    document.getElementsByClassName("qt")[id].innerHTML = p.qt;
+    document.getElementsByClassName("quantidade")[id].innerHTML = p.qt;
 }
 let msgModal = "";
 function mostrarPedido() {
@@ -41,10 +41,10 @@ function mostrarPedido() {
     let subTotal = 0;
     let total = 0;
     for (const produto of lista) {
-        if (produto.qt > 0) {
-            subTotal = (produto.valor * produto.qt).toFixed(2);
+        if (produto.quantidade > 0) {
+            subTotal = (produto.valor * produto.quantidade).toFixed(2);
             total += +subTotal;
-            msgModal += `<p>${produto.nome.toUpperCase()} (R$ ${produto.valor} x ${produto.qt}) = ${subTotal}</p>`;
+            msgModal += `<p>${produto.nome.toUpperCase()} (R$ ${produto.valor} x ${produto.quantidade}) = ${subTotal}</p>`;
         }
     }
     if (msgModal == "") {
