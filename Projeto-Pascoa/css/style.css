@@ -153,29 +153,68 @@ article .comprar{
     padding: 10px;
 }
 
-article .ovos_thumbnail{
+.produto .ovos_thumbnail{
     margin-top: 30px;
 }
 
-article .ovos_titulo{
+.produto .ovos_titulo{
     margin-top: 30px;
     margin-bottom: 25px;
     color: #000;
     font-size: 23px;
 }
 
-article .ovos_resume{
+.produto .ovos_resume{
     color: #000;
     line-height: 20px;
     font-size: 14px;
     margin-bottom: 30px;
 }
-article{
+.produto{
     flex:1;
     min-width: 200px;
     margin-right: 20px;
 }
 
-article a{
-    text-decoration: none;
+
+.ovos_sabores .bt {
+    float: left;
+    width: 20%;
+    height: 20%;
+    text-align: center;
+    background-color: rgb(236, 17, 189);
+    cursor: pointer;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.ovos_sabores .quantidade {
+    float: left;
+    width: 20%;
+    height: 20%;
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+    background-color: rgb(182, 224, 28);
+}
+
+
+.ovos_sabores .valor {
+    float: left;
+    text-align: center;
+    background-color: rgb(37, 216, 61);
+    width: 40%;
+    height: 20%;
+    font-size: 150%;
+    font-weight: bold;
+}
+.menu i {
+        float: right;
+        font-size: 300%;
+        background-color: rgb(184, 11, 155);    
+        margin: 6px;
+        padding: 5px;
+        border-radius: 3px;
+        color: rgb(1, 2, 2);
+        cursor: pointer;
 }

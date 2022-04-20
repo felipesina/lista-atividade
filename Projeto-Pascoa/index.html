@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Páscoa</title>
-    <link rel="stylesheet" href="../Projeto-Pascoa/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../Projeto-Pascoa/css/style.css    ">
 </head>
 
 <body>
@@ -24,6 +28,8 @@
                         <li> <a href="">Seja um revendedor</a> </li>
                         <li> <a href="">Personalizados</a> </li>
                         <li> <a href="">Fale com a gente</a> </li>
+                        <i data-toggle="modal" onclick="mostrarPedido()" data-target="#myModal"
+                        class="material-icons">shopping_cart</i>
                     </ul>
                 </nav>
             </div>
@@ -52,26 +58,8 @@
 
                     <div class="ovos_sabores flex">
 
-                        <article>
-                            <a href="">
-                                <div class="ovos_thumbnail">
-                                    <img src="../Projeto-Pascoa/morango.jpg" width="250" height="250"/>
-                                </div>
-                                <div class="ovos_titulo">
-                                    Ovo de morango
-                                </div>
-                                <div class="ovos_resume">
-                                    Ovo de Baunilha recheado com pedaços de morango.
-                                </div>
-                                <div class="ovos_gostosos">
-                                    <div class="JS">JS</div>
-                                    <div onclick= "Comprar" >Comprar</div>
-                                </div>
-                            </a>
-                        </article>
-                    </br>
-                        <article>
-                            <a href="">
+                        <div class="row lista">
+                            <div class="col-md-6 produto" >
                                 <div class="ovos_thumbnail">
                                     <img src="../Projeto-Pascoa/morango.jpg" width="250" height="250"/>
                                 </div>
@@ -82,87 +70,114 @@
                                     Ovo de Baunilha recheado com pedaços de morango.
                                 </div>
                                 <div class="ovos_sabores">
-                                    <div class="JS">JS</div>
-                                    <div onclick= "Comprar">Comprar</div>
+                                    <div class="valor">100</div>
+                                    <div class="bt">-</div>
+                                    <div class="quantidade">0</div>
+                                    <div class="bt">+</div>
                                 </div>
-                            </a>
-                        </article>
-                    </br>
-                        <article>
-                            <a href="">
-                                <div class="ovos_thumbnail">
-                                    <img src="../Projeto-Pascoa/morango.jpg" width="250" height="250"/>
-                                </div>
-                                <div class="ovos_titulo">
-                                    Ovo de morango
-                                </div>
-                                <div class="ovos_resume">
-                                    Ovo de Baunilha recheado com pedaços de morango.
-                                </div>
-                                <div class="ovos_sabores">
-                                    <div class="JS">JS</div>
-                                    <div onclick= "Comprar">Comprar</div>
-                                </div>
-                            </a>
-                        </article>
-                    </br>
-                        <article>
-                            <a href="">
-                                <div class="ovos_thumbnail">
-                                    <img src="../Projeto-Pascoa/morango.jpg" width="250" height="250"/>
-                                </div>
-                                <div class="ovos_titulo">
-                                    Ovo de morango
-                                </div>
-                                <div class="ovos_resume">
-                                    Ovo de Baunilha recheado com pedaços de morango.
-                                </div>
-                                <div class="ovos_sabores">
-                                    <div class="JS">JS</div>
-                                    <div onclick= "Comprar">Comprar</div>
-                                </div>
-                            </a>
-                        </article>
-                    </br>
-                        <article>
-                            <a href="">
-                                <div class="ovos_thumbnail">
-                                    <img src="../Projeto-Pascoa/morango.jpg" width="250" height="250"/>
-                                </div>
-                                <div class="ovos_titulo">
-                                    Ovo de morango
-                                </div>
-                                <div class="ovos_resume">
-                                    Ovo de Baunilha recheado com pedaços de morango.
-                                </div>
-                                <div class="ovos_sabores">
-                                    <div class="JS">JS</div>
-                                    <div onclick= "Comprar">Comprar</div>
-                                </div>
-                            </a>
-                        </article>
-                    </br>
-                        <article>
-                            <a href="">
-                                <div class="ovos_thumbnail">
-                                    <img src="../Projeto-Pascoa/morango.jpg" width="250" height="250"/>
-                                </div>
-                                <div class="ovos_titulo">
-                                    Ovo de morango
-                                </div>
-                                <div class="ovos_resume">
-                                    Ovo de Baunilha recheado com pedaços de morango.
-                                </div>
-                                <div class="ovos_sabores">
-                                    <div class="JS">JS</div>
-                                    <div onclick= "Comprar">Comprar</div>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
+                            </div>
+                        </div>
                 </div>
             </section>
         </div>
-    </section> 
+    </section>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Informações do Pedido</h4>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer form-inline">
+                    <input type="text" name="" id="nome" class="form-control" placeholder="Nome">
+                    <input type="text" name="" id="endereco" class="form-control" placeholder="Endereço">
+                    <button type="button" onclick="enviar()" class="btn btn-default" disabled
+                        id="btEnviar">Enviar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+       lista = [];
+function buscarListaProduto() {
+    let ajax = new XMLHttpRequest();
+    ajax.open("GET", "js/produtos.json");
+    ajax.send();
+    ajax.onload = function () {
+        lista = JSON.parse(this.response);
+        replicar();
+    }
+}
+
+function replicar() {
+    let i = 0;
+    for (const p of lista) {
+        let id = i;
+        let produto = document.querySelector(".produto").cloneNode(true);
+        produto.querySelector(".ovos_titulo").innerHTML = p.nome.toUpperCase();
+        produto.querySelector("img").src = `img/${p.img}`;
+        produto.querySelector(".valor").innerHTML = `R$ ${p.valor}`;
+        produto.querySelector(".ovos_sabores").innerHTML = p.ovos_sabores;
+        produto.querySelector(".quantidade").innerHTML = p.quantidade;
+
+        produto.querySelector(".menos").addEventListener("click", function () { alterarQt(id, -1) });
+        produto.querySelector(".mais").addEventListener("click", function () { alterarQt(id, 1) });
+
+        document.querySelector(".lista").append(produto);
+        i++;
+    }
+    document.querySelector(".produto").remove();
+}
+
+function alterarQt(id, quantidade) {
+    let p = lista[id];
+    p.qt += qt;
+    if (p.qt < 0) p.qt = 0;
+    document.getElementsByClassName("quantidade")[id].innerHTML = p.qt;
+}
+let msgModal = "";
+function mostrarPedido() {
+    msgModal = "";
+    let subTotal = 0;
+    let total = 0;
+    for (const produto of lista) {
+        if (produto.quantidade > 0) {
+            subTotal = (produto.valor * produto.quantidade).toFixed(2);
+            total += +subTotal;
+            msgModal += `<p>${produto.nome.toUpperCase()} (R$ ${produto.valor} x ${produto.quantidade}) = ${subTotal}</p>`;
+        }
+    }
+    if (msgModal == "") {
+        msgModal = "<p>Nenhum produto selecionado.</p>";
+        document.querySelector("#btEnviar").disabled = "disabled";
+    } else {
+        msgModal += `<b>Total ${total.toFixed(2)}</b>`
+        document.querySelector("#btEnviar").disabled = "";
+    }
+    document.querySelector(".modal-body").innerHTML = msgModal;
+}
+
+function enviar() {
+    let fone = '';
+    msgModal = msgModal.replaceAll("<p>", "").replaceAll("</p>", "\n");
+    msgModal = msgModal.replaceAll("<b>", "*").replaceAll("</b>", "*");
+    let nome = document.querySelector("#nome").value;
+    let endereco = document.querySelector("#endereco").value;
+    msgModal += `\nNome: *${nome}*`;
+    msgModal += `\nEnderço: *${endereco}*`;
+    msgModal = encodeURI(msgModal);
+
+    link = `https://api.whatsapp.com/send?phone=${fone}&text=${msgModal}`;
+    window.open(link, '_blanck')
+}
+
+buscarListaProduto();
+    </script> 
 </body>
 </html>
