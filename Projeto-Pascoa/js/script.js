@@ -1,7 +1,7 @@
 lista = [];
 function buscarListaProduto() {
     let ajax = new XMLHttpRequest();
-    ajax.open("GET", "js/produtos.json");
+    ajax.open("GET", "produtos.json");
     ajax.send();
     ajax.onload = function () {
         lista = JSON.parse(this.response);

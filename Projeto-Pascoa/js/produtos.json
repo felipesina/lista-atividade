@@ -1,37 +1,37 @@
 [
     {
-        "nome": "Chocolate branco com Oreo",
-        "descricao": "Esse é o produto TAL...",
+        "ovos_titulo": "Ovo com oreo",
+        "ovos_resume": "Especialmente criado para você com o delicioso sabor de oreo",
         "valor": 40,
-        "qt": 0,
-        "img": "01.webp"
+        "quantidade": 0,
+        "img": "oreo2.jpeg"
     },
     {
-        "nome": "Brownie com brigadeiro de limão",
-        "descricao": "Esse é o produto TAL...",
+        "ovos_titulo": "Ovo recheado com brigadeiro",
+        "ovos_resume": "Para vc se deliciar com mais e mais brigadeiro",
         "valor": 40,
-        "qt": 0,
-        "img": "02.webp"
+        "quantidade": 0,
+        "img": "brigadeiro.png"
     },
     {
-        "nome": "Brigadeiro ao leite com maracujá",
-        "descricao": "Esse é o produto TAL...",
+        "ovos_titulo": "Ovo prestigido",
+        "ovos_resume": "Esse ovo pra quem gosta de muito prestigio na sua vida.",
         "valor": 40,
-        "qt": 0,
-        "img": "03.webp"
+        "quantidade": 0,
+        "img": "coco.jpg"
     },
     {
-        "nome": "Brigadeiro ao leito com beijinho",
-        "descricao": "Esse é o produto TAL...",
+        "ovos_titulo": "Romeu e julieta",
+        "ovos_resume": "Para quem gosta de queijo com goiabada vai se acabar com o nosso ovo",
         "valor": 40,
-        "qt": 0,
-        "img": "04.webp"
+        "quantidade": 0,
+        "img": "romeuejulieta.jpg"
     },
     {
-        "nome": "Leito Ninho com Nutela",
-        "descricao": "Esse é o produto TAL...",
-        "valor": 45,
-        "qt": 0,
-        "img": "05.webp"
+        "ovos_titulo": "Maracujá",
+        "ovos_resume": "Para quem quer se deliciar com a acidez do maracujá.",
+        "valor": 40,
+        "quantidade": 0,
+        "img": "maracuja.jpg"
     }
 ]
