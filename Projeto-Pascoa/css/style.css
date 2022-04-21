@@ -95,7 +95,7 @@ nav a:hover{
 }
 
 #ofertas section{
-    flex: ;
+    flex: 2;
 }
 
 
@@ -121,21 +121,6 @@ nav a:hover{
     flex-wrap: wrap;
 }
 
-
-article js{
-    background-color: #2b4c99;
-    color: #FFF;
-    font-size: 12px;
-    padding: 10px;
-    margin-right: 3px;
-}
-
-article .comprar{
-    background-color: #39aae1;
-    color: #FFF;
-    font-size: 12px;
-    padding: 10px;
-}
 
 .produto .ovos_thumbnail{
     margin-top: 30px;
