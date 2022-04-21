@@ -2,35 +2,35 @@
     {
         "ovos_titulo": "Ovo com oreo",
         "ovos_resume": "Especialmente criado para você com o delicioso sabor de oreo",
-        "valor": 40,
+        "valor": 43.97,
         "quantidade": 0,
         "img": "oreo2.jpeg"
     },
     {
         "ovos_titulo": "Ovo recheado com brigadeiro",
         "ovos_resume": "Para vc se deliciar com mais e mais brigadeiro",
-        "valor": 40,
+        "valor": 57.89,
         "quantidade": 0,
         "img": "brigadeiro.png"
     },
     {
-        "ovos_titulo": "Ovo prestigido",
+        "ovos_titulo": "Ovo prestigio",
         "ovos_resume": "Esse ovo pra quem gosta de muito prestigio na sua vida.",
-        "valor": 40,
+        "valor": 30.79,
         "quantidade": 0,
         "img": "coco.jpg"
     },
     {
         "ovos_titulo": "Romeu e julieta",
         "ovos_resume": "Para quem gosta de queijo com goiabada vai se acabar com o nosso ovo",
-        "valor": 40,
+        "valor": 48.59,
         "quantidade": 0,
         "img": "romeuejulieta.jpg"
     },
     {
         "ovos_titulo": "Maracujá",
         "ovos_resume": "Para quem quer se deliciar com a acidez do maracujá.",
-        "valor": 40,
+        "valor": 52.55,
         "quantidade": 0,
         "img": "maracuja.jpg"
     }

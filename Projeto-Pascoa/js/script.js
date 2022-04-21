@@ -1,7 +1,7 @@
 lista = [];
 function buscarListaProduto() {
     let ajax = new XMLHttpRequest();
-    ajax.open("GET", "produtos.json");
+    ajax.open("GET", "js/produtos.json");
     ajax.send();
     ajax.onload = function () {
         lista = JSON.parse(this.response);
@@ -14,11 +14,12 @@ function replicar() {
     for (const p of lista) {
         let id = i;
         let produto = document.querySelector(".produto").cloneNode(true);
-        produto.querySelector(".ovos_titulo").innerHTML = p.nome.toUpperCase();
+        // produto.querySelector(".quantidade").innerHTML = p.quantidade;
+        produto.querySelector(".ovos_titulo").innerHTML = p.ovos_titulo.toUpperCase();
         produto.querySelector("img").src = `img/${p.img}`;
         produto.querySelector(".valor").innerHTML = `R$ ${p.valor}`;
-        produto.querySelector(".ovos_sabores").innerHTML = p.ovos_sabores;
         produto.querySelector(".quantidade").innerHTML = p.quantidade;
+        produto.querySelector(".ovos_resume").innerHTML = p.ovos_resume;
 
         produto.querySelector(".menos").addEventListener("click", function () { alterarQt(id, -1) });
         produto.querySelector(".mais").addEventListener("click", function () { alterarQt(id, 1) });

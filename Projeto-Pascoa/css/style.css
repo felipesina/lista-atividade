@@ -95,12 +95,9 @@ nav a:hover{
 }
 
 #ofertas section{
-    flex: 2;
+    flex: ;
 }
 
-#ofertas aside{
-    flex: 1;
-}
 
 .ovos_titulo{
     margin-top: 30px;
@@ -124,19 +121,6 @@ nav a:hover{
     flex-wrap: wrap;
 }
 
-article{
-    flex:1;
-    min-width: 200px;
-    margin-right: 20px;
-}
-
-article a{
-    text-decoration: none;
-}
-
-article .ovos_sabores{
-    display: flex;
-}
 
 article js{
     background-color: #2b4c99;
@@ -179,8 +163,8 @@ article .comprar{
 
 .ovos_sabores .bt {
     float: left;
-    width: 20%;
-    height: 20%;
+    width: 10%;
+    height: 10%;
     text-align: center;
     background-color: rgb(236, 17, 189);
     cursor: pointer;
@@ -190,8 +174,8 @@ article .comprar{
 
 .ovos_sabores .quantidade {
     float: left;
-    width: 20%;
-    height: 20%;
+    width: 10%;
+    height: 10%;
     text-align: center;
     font-size: 150%;
     font-weight: bold;
@@ -203,7 +187,7 @@ article .comprar{
     float: left;
     text-align: center;
     background-color: rgb(37, 216, 61);
-    width: 40%;
+    width: 25%;
     height: 20%;
     font-size: 150%;
     font-weight: bold;
@@ -217,4 +201,37 @@ article .comprar{
         border-radius: 3px;
         color: rgb(1, 2, 2);
         cursor: pointer;
+}
+footer{
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+}
+
+
+.footer_area{
+    display: flex;
+}
+
+.footer_areaitem{
+    flex:1;
+    color: #FFF;
+}
+
+.flexColumn{
+    flex-direction: column;
+}
+.footer_contact, 
+.footer_instagram,
+.footer_tel,
+.footer_email,
+.footer_news,
+.footer_tweets,
+.foot_copy{
+    padding: 10px;
+    color: #FFF;
+    font-size: 14px;
+}
+.footer_contact{
+    font-size: 20px;
 }
