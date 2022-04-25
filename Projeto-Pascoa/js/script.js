@@ -14,7 +14,6 @@ function replicar() {
     for (const p of lista) {
         let id = i;
         let produto = document.querySelector(".produto").cloneNode(true);
-        // produto.querySelector(".quantidade").innerHTML = p.quantidade;
         produto.querySelector(".ovos_titulo").innerHTML = p.ovos_titulo.toUpperCase();
         produto.querySelector("img").src = `img/${p.img}`;
         produto.querySelector(".valor").innerHTML = `R$ ${p.valor}`;
@@ -45,7 +44,7 @@ function mostrarPedido() {
         if (produto.quantidade > 0) {
             subTotal = (produto.valor * produto.quantidade).toFixed(2);
             total += +subTotal;
-            msgModal += `<p>${produto.nome.toUpperCase()} (R$ ${produto.valor} x ${produto.quantidade}) = ${subTotal}</p>`;
+            msgModal += `<p>${produto.ovos_titulo.toUpperCase()} (R$ ${produto.valor} x ${produto.quantidade}) = ${subTotal}</p>`;
         }
     }
     if (msgModal == "") {
