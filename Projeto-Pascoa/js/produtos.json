@@ -8,7 +8,7 @@
     },
     {
         "ovos_titulo": "Ovo brigadeiro",
-        "ovos_resume": "Para você se deliciar com mais e mais brigadeiro.",
+        "ovos_resume": "Para você se deliciar com mais e mais brigadeiro cremoso.",
         "valor": 57.89,
         "quantidade": 0,
         "img": "brigadeiro.png"
@@ -29,7 +29,7 @@
     },
     {
         "ovos_titulo": "Maracujá",
-        "ovos_resume": "Para quem quer se deliciar com a acidez do maracujá.",
+        "ovos_resume": "Para quem quer se deliciar e se lambuzar com a acidez do maracujá suave.",
         "valor": 52.55,
         "quantidade": 0,
         "img": "maracuja.jpg"
